@@ -1,0 +1,97 @@
+/* Basic Setup */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+nav {
+    background-color: #333;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav button {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+nav button:hover {
+    background-color: #777;
+}
+
+/* Page sections (for showing/hiding) */
+.page-section {
+    padding: 2rem;
+}
+
+/* ========= HOME SECTION STYLES ========= */
+#home-section {
+    /* This is your background image */
+    background-image: url("https://plus.unsplash.com/premium_photo-1666620864874-720514e3ae61?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    height: 90vh; /* Make it almost full height */
+    
+    /* Styles for the text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#home-section h1 {
+    font-size: 4rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark semi-transparent background for text */
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+
+/* ========= PICTURES SECTION STYLES ========= */
+#image-grid {
+    display: grid;
+    /* This will create 3 columns on big screens, 2 on medium, 1 on small */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem; /* Space between pictures */
+}
+
+#image-grid img {
+    width: 100%; /* Make image fill the column */
+    height: 250px; /* Give all images a fixed height */
+    object-fit: cover; /* Crop image to fit, don't stretch */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* --- Gallery Styles --- */
+
+/* This targets the 'content' div */
+.content {
+  /* We'll use this for the grid */
+  display: grid; 
+  
+  /* Create 3 columns of equal size */
+  grid-template-columns: repeat(3, 1fr); 
+  
+  /* Add some spacing between pictures */
+  gap: 15px; 
+  
+  padding: 20px; /* Add some padding around the whole grid */
+}
+
+/* This targets every image *inside* the 'content' div */
+.content img {
+  width: 100%;  /* Make the image fill its grid cell */
+  height: 100%; /* Make the image fill its grid cell */
+  object-fit: cover; /* Crop the image nicely, no stretching */
+  border-radius: 8px; /* Give the images soft, rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add a subtle drop shadow */
+}
